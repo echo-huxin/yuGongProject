@@ -15,6 +15,7 @@
 
 </head>
 <body>
+
 <div class="header">
     <div class="header-in">
         <div class="yg-logo">
@@ -29,18 +30,18 @@
             <a href="#">请登录</a>
         </div>
     </div>
-
 </div>
+
 <div class="main">
    <div class="main-in">
        <div class="SwitchTitle">
            <span class="model1">手机号/邮箱注册</span><span class="model2 active">个性账号注册</span>
        </div>
+       <form action="/v1/singIn/register" method="post" onsubmit="return checkRegister() ">
 
-       <form action="">
            <div class="box-input" id="reg-phone">
                <div class="left-input"  >用户名</div>
-               <input type="text" placeholder="填入手机号或者邮箱" id="user1_name">
+               <input type="text" placeholder="填入手机号或者邮箱" id="user1_name" >
                <div class="ts">
                    <span id="uname1-tips" >请输入注册手机或邮箱号</span>
                </div>
@@ -48,34 +49,36 @@
 
            <div class="box-input" id="reg-personality">
                <div class="left-input" >用户名</div>
-               <input type="text" placeholder="自定义用户名" id="user2_name">
+               <input type="text" placeholder="自定义用户名" id="user2_name" name="uName" >
                <div class="ts">
                    <span id="uname2-tips" >请输入合要求的用户名</span>
                </div>
            </div>
 
-
            <div class="box-input">
                <div class="left-input " >设置密码</div>
-               <input type="password" placeholder="密码8-16个字符" id="set_pwd">
+               <input type="password" placeholder="密码8-16个字符" id="set_pwd" name="upwd">
                <div class="ts">
                    <span id="pwd1-tips">请输入合要求的密码</span>
                </div>
            </div>
+
            <div class="box-input">
                <div class="left-input" >确认密码</div>
-               <input type="password" placeholder="请再次输入密码" id="affirm_pwd">
+               <input type="password" placeholder="请再次输入密码" id="affirm_pwd" >
                <div class="ts">
                    <span id="pwd2-tips" >请输入合要求的密码</span>
                </div>
            </div>
+
            <div class="box-input" id="input-phone">
                <div class="left-input " >手机号码</div>
-               <input type="text" placeholder="11位手机号码" id="cell_phone">
+               <input type="text" placeholder="11位手机号码" id="cell_phone" name="phone">
                <div class="ts">
                    <span id="phone-tips">手机格式不正确</span>
                </div>
            </div>
+
             <!--   <div class="box-input">
                <div class="left-input " >短信验证</div>
                <input type="text" placeholder="输入短信验证" id="sms">
@@ -83,19 +86,24 @@
                    <span id="yzm-tips">请输入和要求的密码</span>
                </div>
            </div>-->
+
             <!--合法条款-->
            <div class="legalNotices">
-               <input type="checkbox">我已经阅读并同意遵守
+               <input type="checkbox" name="xy" value="1" >我已经阅读并同意遵守
                <a href="#">法律声明</a>和<a href="#">隐私条款</a>
            </div>
-           <button class="register" type="submit">立即注册</button>
+
+           <button class="register" type="submit" >立即注册</button>
        </form>
 
    </div>
 </div>
-<div class="footer">
 
+<!--阅读注册条款提醒-->
+<div class="clauseRemind">
+   请先阅读愚公坊注册条款
 </div>
+
 <script src="js/jquery-3.1.1.js"></script>
 <script src="js/less.js"></script>
 <script src="js/index.js"></script>
